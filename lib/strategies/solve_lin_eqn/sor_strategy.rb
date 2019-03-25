@@ -8,7 +8,7 @@
 ## x = sorm.calculate # => Matrix[[0.9998668946614292], [2.000021547671973], [3.000054218557957]]
 
 
-class Dsp::Strategies::SorStrategy
+class Linarb::Strategies::SorStrategy
 
 
     def initialize(a_arr,b_arr)
