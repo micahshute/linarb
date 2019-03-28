@@ -1,0 +1,5 @@
+module Linarb::Strategies
+
+
+
+end

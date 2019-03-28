@@ -1,4 +1,4 @@
-class Linarb::LagrangeInterpolatingStrategy
+class Linarb::Strategies::LagrangeInterpolatingStrategy
 
 
 end
