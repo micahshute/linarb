@@ -1,5 +1,6 @@
+## 
 # Calculate Line of best fit using Least Squares
-Initialize with arrays of x values and y values (same length)
+# Initialize with arrays of x values and y values (same length)
 class Linarb::Strategies::LinearLeastSquares
 
     def initialize(xvals, yvals)
@@ -15,13 +16,13 @@ class Linarb::Strategies::LinearLeastSquares
     def calculate
         s1 = @xvals.sum
         s2 = @yvals.sum
-        s3 = dot(@xvals, xvals)
-        s4 = dot(@xvals, yvals)
-        a = (n * s4 - s1 * s2) / (n * s3 - s1 ** 2)
-        b = (s3 * s2 - s4 * s1) / n * s3 - s1 ** 2)
+        s3 = dot(@xvals, @xvals)
+        s4 = dot(@xvals, @yvals)
+        a = (@n * s4 - s1 * s2).to_f / (@n * s3 - s1 ** 2)
+        b = (s3 * s2 - s4 * s1).to_f / (@n * s3 - s1 ** 2)
         @coeff = [b, a]
         @eqn = ->(x){ b * x + a}
-        @error = @xvals.map.with_index{ |x, i| ( yvals[i] - @eqn[x] ).abs ** 2 }.sum
+        @error = @xvals.map.with_index{ |x, i| ( @yvals[i] - @eqn[x] ).abs ** 2 }.sum
         @eqn
     end
 

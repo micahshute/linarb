@@ -3,9 +3,9 @@ require 'ostruct'
 require './lib/linarb'
 
 
-require './lib/strategies/strategies'
-require './lib/strategies/solve_lin_eqn/sor_strategy'
-require './lib/strategies/linfit/test'
+require_relative '../lib/strategies/strategies'
+require_relative '../lib/strategies/solve_lin_eqn/sor_strategy'
+require_relative '../lib/strategies/linfit/linear_least_squares'
 
 
 
